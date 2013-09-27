@@ -12,12 +12,16 @@ with open(os.path.join(here, 'pyramid_alembic', '__init__.py')) as v_file:
 def read(fname):
     return open(os.path.join(here, fname)).read()
 
-requirements = []
+requirements = [
+    'pyramid',
+    'alembic',
+    'SQLALchemy'
+]
 
 test_requires = [
     'WebTest',
-    'nose',
-    'coverage',
+    'pytest',
+    'pytest-cov',
 ]
 
 extras_require = {
