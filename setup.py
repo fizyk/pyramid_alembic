@@ -62,4 +62,8 @@ setup(
     include_package_data=True,
     zip_safe=False,
     extras_require=extras_require,
+    entry_points = '''
+    [console_scripts]
+    palembic = pyramid_alembic.cmd:run_alembic
+    ''',
 )
